@@ -1059,6 +1059,10 @@ button[type="submit"]:hover{
     width: 80rem;
     margin: 0 auto;
   }
+
+  .overlay-text h3{
+    margin-top: 5rem;
+  }
 }
 
 @media screen and (min-width: 1740px) {
