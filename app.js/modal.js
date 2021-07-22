@@ -56,6 +56,10 @@ const modals = document.querySelectorAll('.modal');
 // Get the <span> element that closes the modal
 const spans = document.getElementsByClassName("close");
 
+
+// Get the 2nd close element that closes the modal
+const secondCloseBtn = document.getElementsByClassName("modal-second-closebtn");
+
 // When the user clicks the button, open the modal
 for (let i = 0; i < btn.length; i++) {
  btn[i].onclick = function(e) {
@@ -72,6 +76,15 @@ for (let i = 0; i < spans.length; i++) {
       if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
     }
  }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (let i = 0; i < secondCloseBtn.length; i++) {
+   secondCloseBtn[i].onclick = function() {
+      for (let index in modals) {
+        if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+      }
+   }
 }
 
 // When the user clicks anywhere outside of the modal, close it

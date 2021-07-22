@@ -419,13 +419,13 @@ a{
 }
 
 .overlay-text h3{
-  font-size: 2.1rem;
-  margin: 40% auto 0 auto;
+  font-size: 1.6rem;
+  margin: 30% auto 0 auto;
   text-align: center;
 }
 
 .overlay-text p {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-top: 10%;
   text-align: center;
@@ -464,13 +464,14 @@ body{
 }
 
 .modal-content{
+  position: relative;
   background: #f4f4f4;
   margin: 2.5% auto;
   width: 95%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 1s;
-  height: 90rem;
+  height: auto;
   border-radius: .4rem;
 }
 
@@ -495,23 +496,70 @@ body{
   to{opacity: 1}
 }
 
+.modal-body {
+  display: grid;
+  justify-items: center;
+}
+
 .modal-content p{
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   color: #343a40;
 }
 
-.modal-content h2{
+.modal-content h3{
   font-family: "assistant";
   font-size: 2rem;
   text-align: center;
-  padding: 2rem 0 0 0;
+  padding: 3rem 0 0 0;
   color: rgb(186,85,211);
+  margin: .3rem .3rem;
 }
 
 .modal-content img{
-  width: 90%;
-  margin: 0 auto;
+  width: 85%;
+  margin-top: 1rem;
+}
+
+
+.modal-body table i {
+  font-size: 3rem;
+}
+
+.modal-body table {
+  font-size: 1.2rem;
+}
+
+.modal-github {
+  margin-top: 2rem;
+}
+
+.modal-body a, .github-and-live-btns{
+  width: 60%;
+}
+
+.modal-github, .modal-live{
+  background: rgb(230,230,250);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.modal-github i, .modal-live i{
+  margin-left: .5rem;
+  align-self: center;
+}
+
+.modal-second-closebtn {
+  background: rgb(186,85,211);
+  color: white;
+  width: 60%;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.modal-second-closebtn i {
+  margin-right: .5rem;
+  align-self: center;
 }
 
 /* end modal */
@@ -613,6 +661,12 @@ input, textarea, button {
     margin: .4rem 0 1.1rem 0;
 }
 
+input, textarea{
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: .6rem;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -650,7 +704,7 @@ button[type="submit"]:hover{
     border-radius: 8px;
 }
 
-#status.success{
+/* #status.success{
     background: rgb(144, 238, 144);
     animation: status 4s forwards;
 }
@@ -659,7 +713,7 @@ button[type="submit"]:hover{
     background: rgba(240, 52, 52, 1);
     color: white;
     animation: status 4s forwards;
-}
+} */
 
 @keyframes status {
     0%{
@@ -736,6 +790,14 @@ button[type="submit"]:hover{
     flex: 1 1 17.2rem;
   }
   
+  .overlay-text h3{
+    font-size: 1.9rem;
+  }
+  
+  .overlay-text p {
+    font-size: 1.5rem;
+  }
+  
 }
 
 @media screen and (min-width: 425px){
@@ -765,6 +827,14 @@ button[type="submit"]:hover{
     width: 23rem;
     flex: 3 3 17.2rem;
   }
+
+  .overlay-text h3{
+    font-size: 2.1rem;
+  }
+  
+  .overlay-text p {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (min-width: 488px){
@@ -782,6 +852,28 @@ button[type="submit"]:hover{
     font-size: 1.6rem;
     font-weight: 700;
     display: block;
+  }
+
+  .github-and-live-btns{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+  }
+
+  .modal-github, .modal-live{
+    margin: 1rem auto;
+  }
+
+  .modal-second-closebtn {
+    max-width: 16rem;
+  }
+}
+
+
+@media screen and (min-width: 576px){
+  .modal-content{
+    max-width: 31rem;
   }
 }
 
@@ -824,17 +916,30 @@ button[type="submit"]:hover{
     font-size: 2rem;
   }
   
-  .table td {
-    padding: 3rem 4rem;
-  }
-  
   .table i{
     font-size: 6.3rem;
+  }
+
+  .table td {
+    padding: 3rem 4rem;
   }
   
   .table img {
     width: 6.5rem;
     margin: 0 auto -1rem auto;
+  }
+
+ .modal-body .table td {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+  }  
+
+ .modal-body .table td i{
+    font-size: 4.6rem;
+  }
+
+  .github-and-live-btns{
+    max-width: 50rem;
   }
   
 }
@@ -847,6 +952,39 @@ button[type="submit"]:hover{
   .portfolio-image-container{
     width: 28rem;
     flex: 1 1 17.2rem;
+  }
+
+  .overlay-text h3{
+    font-size: 2.7rem;
+  }
+  
+  .overlay-text p {
+    font-size: 2rem;
+  }
+
+  .modal-content h3{
+    font-size: 3rem;
+  }
+
+  .modal-body .table td {
+    padding: 1rem 2.5rem;
+    font-size: 2.3rem;
+  }  
+
+ .modal-body .table td i{
+    font-size: 6rem;
+  }
+
+  .modal-content img{
+    width: 40rem;
+  }
+
+  .modal-content p{
+    width: 40rem;
+  }
+
+  .about{
+    font-size: 1.5rem;
   }
 }
 
@@ -892,6 +1030,64 @@ button[type="submit"]:hover{
 
   .links a:hover {
     color: rgb(186,85,211);
+  }
+
+  .contact-container{
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .modal-content{
+    max-width: 50rem;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .modal-content{
+    max-width: 72rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact-container{
+    width: 65%;
+  }
+
+  .about{
+    font-size: 1.6rem;
+    width: 80rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1740px) {
+  .contact-container{
+    width: 75rem;
+  }
+
+  .portfolio{
+    display: grid;
+    grid-template-rows: 4rem 35rem;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin: 0 auto;
+  }
+  
+  .portfolios{
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .portfolio-image-container{
+    width: 23.2rem;
+  }
+
+  .portfolio h2, .skills h2, .about h2, .contact h2 {
+    grid-column: 1/ span 3;
+  }
+
+  .third-porfolio{
+    grid-column: 3;
   }
 }
 

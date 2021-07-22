@@ -76,3 +76,13 @@ scrollLinks.forEach((link) => {
   });
 });
 // calculate heights
+
+const nameLogo = document.querySelector(".name-logo");
+
+nameLogo.addEventListener("click", function(){
+  window.scroll({
+    top: 0, 
+    left: 0, 
+    behavior: 'smooth'
+  });
+})
